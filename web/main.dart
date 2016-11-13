@@ -2,8 +2,9 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
-import 'pkg/encipher.dart';
-import 'pkg/decipher.dart';
+import 'pkg/logic.dart';
+
+CipherApplication numcipher = new CipherApplication();
 
 void main() {
   querySelector('#submit').onClick.listen(submitEvent);
@@ -11,5 +12,6 @@ void main() {
 
 void submitEvent(MouseEvent event) {
   String message = (querySelector('#textfield') as InputElement).value;
-  print(encipher(message));
+  numcipher.setTranslationString(message);
+  print(numcipher.returnTranslatedString());
 }
