@@ -1,8 +1,8 @@
 name: 'numcipher'
 version: 0.0.1
-description: An absolute bare-bones web app.
-#author: Lukas Muller <email@example.com>
-#homepage: https://www.example.com
+description: A Letter number enciphering & deciphering web application.
+author: Lukas Muller <lamuller@protonmail.com>
+homepage: https://lukasmuller.xyz
 
 environment:
   sdk: '>=1.0.0 <2.0.0'
