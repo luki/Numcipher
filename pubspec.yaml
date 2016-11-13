@@ -1,18 +1,9 @@
-name: 'numcipher'
+name: basic_http_server
+author: Seth Ladd <sethladd@gmail.com>
 version: 0.0.1
-description: A Letter number enciphering & deciphering web application.
-author: Lukas Muller <lamuller@protonmail.com>
-homepage: https://lukasmuller.xyz
-
-environment:
-  sdk: '>=1.0.0 <2.0.0'
-
-#dependencies:
-#  my_dependency: any
-
-dev_dependencies:
-  browser: '>=0.10.0 <0.11.0'
-  dart_to_js_script_rewriter: '^1.0.1'
-
-transformers:
-- dart_to_js_script_rewriter
+homepage: https://github.com/igrigorik/heroku-buildpack-dart
+description: A minimal static HTTP server to demonstrate Dart on Heroku.
+dependencies:
+  browser: any
+  shelf: any
+  shelf_static: any
