@@ -9,14 +9,23 @@ CipherApplication numcipher = new CipherApplication();
 void main() {
   querySelector('#submit').onClick.listen(submitEvent);
   querySelector('#selection').onChange.listen(changeEvent);
+
+  querySelector('#error-alert').hidden = true;
 }
 
 void submitEvent(MouseEvent event) {
   String message = (querySelector('#textfield') as InputElement).value;
   numcipher.setTranslationString(message);
-  print(numcipher.returnTranslatedString());
+  var result = numcipher.returnTranslatedString();
+  if (result != '???') {
+    print(result);
+  } else {
+    querySelector('#error-alert').hidden = false;
+    print("Error!");
+  }
 }
 
 void changeEvent(Event event) {
   numcipher.changeTranslationType();
+  (querySelector('#textfield') as InputElement).value = "";
 }

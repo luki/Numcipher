@@ -7,6 +7,8 @@ class CipherApplication {
   String _translationString;
   String _translatedString;
 
+  String getTranslationString() => _translationString;
+
   void changeTranslationType() {
     switch (_translationType) {
       case 0:

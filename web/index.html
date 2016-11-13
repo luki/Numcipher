@@ -12,17 +12,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="scaffolded-by" content="https://github.com/google/stagehand">
     <title>numcipher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.dart" type="application/dart"></script>
     <script defer src="packages/browser/dart.js"></script>
 </head>
 
 <body>
-  <select id="selection"class="custom-select">
-    <option value="1" selected>Encipher</option>
-    <option value="2">Decipher</option>
-  </select>
-  <input type="text" id="textfield">
-  <button type="submit" placeholder="submit" id="submit">
+  <div class="container">
+    <div id="error-alert" class="alert alert-danger" role="alert">
+    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </div>
+    <select id="selection"class="custom-select">
+      <option value="1" selected>Encipher</option>
+      <option value="2">Decipher</option>
+    </select>
+    <input type="text" id="textfield">
+    <button type="submit" placeholder="submit" id="submit">
+  </div>
 </body>
 </html>
