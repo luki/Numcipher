@@ -8,10 +8,15 @@ CipherApplication numcipher = new CipherApplication();
 
 void main() {
   querySelector('#submit').onClick.listen(submitEvent);
+  querySelector('#selection').onChange.listen(changeEvent);
 }
 
 void submitEvent(MouseEvent event) {
   String message = (querySelector('#textfield') as InputElement).value;
   numcipher.setTranslationString(message);
   print(numcipher.returnTranslatedString());
+}
+
+void changeEvent(Event event) {
+  numcipher.changeTranslationType();
 }
