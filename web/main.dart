@@ -9,8 +9,6 @@ CipherApplication numcipher = new CipherApplication();
 void main() {
   querySelector('#submit').onClick.listen(submitEvent);
   querySelector('#selection').onChange.listen(changeEvent);
-
-  querySelector('#error-alert').hidden = true;
 }
 
 void submitEvent(MouseEvent event) {
@@ -18,10 +16,9 @@ void submitEvent(MouseEvent event) {
   numcipher.setTranslationString(message);
   var result = numcipher.returnTranslatedString();
   if (result != '???') {
-    (querySelector('#result') as ParagraphElement).text = result;
+    (querySelector('#result') as HeadingElement).text = result;
   } else {
-    querySelector('#error-alert').hidden = false;
-    (querySelector('#result') as ParagraphElement).text = "";
+    (querySelector('#result') as HeadingElement).text = "";
     print("Error!");
   }
 }

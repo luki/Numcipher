@@ -31,48 +31,50 @@
 <body>
   <nav class="navbar navbar-light grey lighten-3">
 
-              <!--Navbar Brand-->
-              <a class="navbar-brand waves-effect waves-light" href="#">Numcipher</a>
-              <!--Links-->
-              <ul class="nav navbar-nav">
-                  <li class="nav-item active">
-                      <a class="nav-link waves-effect waves-light">Home <span class="sr-only">(current)</span></a>
-                  </li>
-              </ul>
-          </nav>
+    <!--Navbar Brand-->
+    <a class="navbar-brand waves-effect waves-light" href="#">Numcipher</a>
+    <!--Links-->
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link waves-effect waves-light">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </nav>
 
   <div class="container">
-    <div id="error-alert" class="alert alert-danger" role="alert">
-    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    
+    <div class="col-xs-6 col-md-4 left">
+      <h3>Fancy display heading<br><small class="text-muted">With faded secondary text</small></h3>
+      <div id="resultDiv"><p id="result"></p></div>
     </div>
-    <div class="col-md-6">
+
+    <div class="col-xs-6 col-md-4 right">
       <select id="selection" class="mdb-select">
         <option value="1" selected>Encipher</option>
         <option value="2">Decipher</option>
       </select>
+    <div>
+
       <div class="md-form">
         <input type="text" id="textfield" class="form-control">
         <label for="textfield" class="">Message</label>
       </div>
-      <button type="button" id="submit" class="btn btn-default waves-effect waves-light">Submit</button>
+
+      <div><button type="button" id="submit" class="btn btn-default waves-effect waves-light">Submit</button></div>
     </div>
-  </div>
-  <div class="col-md-6">
-    <h1>Your result</h1>
-    <p><small>You have not tried the application yet.</small></p>
-    <div id="resultDiv"><p id="result" ></p></div>
-  </div>
 
-  <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    </div>
 
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/tether.min.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
 
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
