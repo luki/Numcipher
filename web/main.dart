@@ -18,9 +18,10 @@ void submitEvent(MouseEvent event) {
   numcipher.setTranslationString(message);
   var result = numcipher.returnTranslatedString();
   if (result != '???') {
-    print(result);
+    (querySelector('#result') as ParagraphElement).text = result;
   } else {
     querySelector('#error-alert').hidden = false;
+    (querySelector('#result') as ParagraphElement).text = "";
     print("Error!");
   }
 }

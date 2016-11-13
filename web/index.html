@@ -12,24 +12,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="scaffolded-by" content="https://github.com/google/stagehand">
     <title>numcipher</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.dart" type="application/dart"></script>
     <script defer src="packages/browser/dart.js"></script>
 </head>
 
 <body>
+  <nav class="navbar navbar-light grey lighten-3">
+
+              <!--Navbar Brand-->
+              <a class="navbar-brand waves-effect waves-light" href="#">Numcipher</a>
+              <!--Links-->
+              <ul class="nav navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link waves-effect waves-light">Home <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+          </nav>
+
   <div class="container">
     <div id="error-alert" class="alert alert-danger" role="alert">
     <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
-    <select id="selection"class="custom-select">
-      <option value="1" selected>Encipher</option>
-      <option value="2">Decipher</option>
-    </select>
-    <input type="text" id="textfield">
-    <button type="submit" placeholder="submit" id="submit">
+    <div class="col-md-6">
+      <select id="selection" class="mdb-select">
+        <option value="1" selected>Encipher</option>
+        <option value="2">Decipher</option>
+      </select>
+      <div class="md-form">
+        <input type="text" id="textfield" class="form-control">
+        <label for="textfield" class="">Message</label>
+      </div>
+      <button type="button" id="submit" class="btn btn-default waves-effect waves-light">Submit</button>
+    </div>
   </div>
+  <div class="col-md-6">
+    <h1>Your result</h1>
+    <p><small>You have not tried the application yet.</small></p>
+    <div id="resultDiv"><p id="result" ></p></div>
+  </div>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/tether.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
