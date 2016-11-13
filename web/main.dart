@@ -2,7 +2,14 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
+import 'pkg/encipher.dart';
+import 'pkg/decipher.dart';
 
 void main() {
-  querySelector('#output').text = 'Your Dart app is running.';
+  querySelector('#submit').onClick.listen(submitEvent);
+}
+
+void submitEvent(MouseEvent event) {
+  String message = (querySelector('#textfield') as InputElement).value;
+  print(encipher(message));
 }
