@@ -2,7 +2,7 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'dart:html';
-import 'pkg/logic.dart';
+import 'pkg/cipherapp.dart';
 
 CipherApplication numcipher = new CipherApplication();
 
@@ -16,7 +16,14 @@ void submitEvent(MouseEvent event) {
   numcipher.setTranslationString(message);
   List results = numcipher.getTranslatedStrings();
 
-  print(results.first); // Most recent entry
+  // Create new entry div
+
+  var newEntry = new DivElement()
+  ..classes.add('entry')
+  ..text = results.first; // Results.first is latest entry
+
+  // Add entry div to table
+  (querySelector('#result') as DivElement).children.insert(0, newEntry);
 }
 
 void changeEvent(Event event) {
