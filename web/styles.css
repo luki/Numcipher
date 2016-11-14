@@ -7,3 +7,18 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+.content-area {
+  margin-top: 80px;
+  padding-bottom: 20px;
+}
+
+#selection {
+  margin-bottom: 20px;
+}
+
+footer {
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+}

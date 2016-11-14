@@ -6,9 +6,16 @@ import 'pkg/cipherapp.dart';
 
 CipherApplication numcipher = new CipherApplication();
 
+var copyEventTrue = false;
+
 void main() {
   querySelector('#submit').onClick.listen(submitEvent);
   querySelector('#selection').onChange.listen(changeEvent);
+
+
+  if (copyEventTrue != false) {
+    querySelector('#Copy').onClick.listen(copyEvent);
+  }
 }
 
 void submitEvent(MouseEvent event) {
@@ -21,12 +28,27 @@ void submitEvent(MouseEvent event) {
   ..classes.add('list-group-item')
   ..text = results.first;
 
+  var newCopy = new ButtonElement()
+  ..type = "button"
+  ..classes.add('float-xs-right')
+  ..id = "Copy"
+  ..text = "Copy";
+
+  newEntry.children.add(newCopy);
+
   // Add entry div to table
   (querySelector('#results') as UListElement).children.insert(0, newEntry);
+  if (copyEventTrue != true) {
+    copyEventTrue = true;
+  }
 
 }
 
 void changeEvent(Event event) {
   numcipher.changeTranslationType();
   (querySelector('#textfield') as InputElement).value = "";
+}
+
+void copyEvent(MouseEvent event) {
+  print("hi");
 }
