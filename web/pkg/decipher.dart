@@ -58,6 +58,13 @@ String back_translation(String number) {
   		return "Ö";
   	case "29":
   		return "Ü";
+    case "30": return "Á";
+    case "31": return "À";
+    case "32": return "Å";
+    case "33": return "Ñ";
+    case "34": return "Ò";
+    case "35": return "Ó";
+    case "36": return "Ø";
   	default:
   		return "?";
   }

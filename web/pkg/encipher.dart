@@ -60,6 +60,20 @@ String letter_to_number(String letter) {
       return "28";
     case "Ü":
       return "29";
+    case "Á":
+      return "30";
+    case "À":
+      return "31";
+    case "Å":
+      return "32";
+    case "Ñ":
+      return "33";
+    case "Ò":
+      return "34";
+    case "Ó":
+      return "35";
+    case "Ø":
+      return "36";
     default:
       return "0";
   }
