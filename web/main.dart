@@ -6,8 +6,6 @@ import 'pkg/cipherapp.dart';
 
 CipherApplication numcipher = new CipherApplication();
 
-var copyEventTrue = false;
-
 void main() {
   querySelector('#submit').onClick.listen(submitEvent);
   querySelector('#selection').onChange.listen(changeEvent);
@@ -38,9 +36,6 @@ void submitEvent(MouseEvent event) {
 
   // Add entry div to table
   (querySelector('#results') as UListElement).children.insert(0, newEntry);
-  if (copyEventTrue != true) {
-    copyEventTrue = true;
-  }
 
 }
 
