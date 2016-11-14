@@ -17,13 +17,13 @@ void submitEvent(MouseEvent event) {
   List results = numcipher.getTranslatedStrings();
 
   // Create new entry div
-
-  var newEntry = new DivElement()
-  ..classes.add('entry')
-  ..text = results.first; // Results.first is latest entry
+  var newEntry = new UListElement()
+  ..classes.add('list-group-item')
+  ..text = results.first;
 
   // Add entry div to table
-  (querySelector('#result') as DivElement).children.insert(0, newEntry);
+  (querySelector('#results') as UListElement).children.insert(0, newEntry);
+
 }
 
 void changeEvent(Event event) {
