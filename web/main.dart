@@ -14,13 +14,9 @@ void main() {
 void submitEvent(MouseEvent event) {
   String message = (querySelector('#textfield') as InputElement).value;
   numcipher.setTranslationString(message);
-  var result = numcipher.returnTranslatedString();
-  if (result != '???') {
-    (querySelector('#result') as HeadingElement).text = result;
-  } else {
-    (querySelector('#result') as HeadingElement).text = "";
-    print("Error!");
-  }
+  List results = numcipher.getTranslatedStrings();
+
+  print(results.first); // Most recent entry
 }
 
 void changeEvent(Event event) {

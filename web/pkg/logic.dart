@@ -5,7 +5,7 @@ class CipherApplication {
 
   int _translationType = 0;
   String _translationString;
-  String _translatedString;
+  List<String> _translatedStrings = new List();
 
   String getTranslationString() => _translationString;
 
@@ -32,10 +32,10 @@ class CipherApplication {
   void _translateString() {
     switch (_translationType) {
       case 0:
-        _translatedString = encipher(_translationString);
+        _translatedStrings.insert(0, encipher(_translationString));
         break;
       case 1:
-        _translatedString = decipher(_translationString);
+        _translatedStrings.insert(0, decipher(_translationString));
         break;
       default:
         print("Error");
@@ -43,9 +43,11 @@ class CipherApplication {
     }
   }
 
-  String returnTranslatedString() {
+  List<String> getTranslatedStrings() {
     _translateString();
-    return _translatedString;
+    return _translatedStrings;
   }
 
+  String getTranslatedString(int index) => _translatedStrings[index];
+  int getTranslatedStringsAmount() => _translatedStrings.length;
 }

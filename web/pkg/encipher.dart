@@ -74,12 +74,15 @@ String encipher(String word) {
 
   for (var i = 0; i < word_length; i++) {
     if (split_word[i] != ' ') {
-      new_word = new_word + letter_to_number(split_word[i]);
-      if (i != word_length - 1) {
-        new_word = new_word + '-';
+      String current_letter = split_word[i];
+      new_word += letter_to_number(current_letter);
+
+      var next_i = i + 1;
+      if (i != (word.length - 1) && split_word[next_i] != ' ') {
+        new_word += "-";
       }
     } else {
-      new_word = new_word + ' ';
+      new_word += " ";
     }
   }
   return new_word;
