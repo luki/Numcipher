@@ -27,6 +27,7 @@ class CipherApplication {
 
   void setTranslationString(String string) {
     _translationString = string;
+    _translateString();
   }
 
   void _translateString() {
@@ -44,10 +45,11 @@ class CipherApplication {
   }
 
   List<String> getTranslatedStrings() {
-    _translateString();
     return _translatedStrings;
   }
 
   String getTranslatedString(int index) => _translatedStrings[index];
   int getTranslatedStringsAmount() => _translatedStrings.length;
+
+  void clearResults() => _translatedStrings.clear();
 }
