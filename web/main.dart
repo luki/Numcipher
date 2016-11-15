@@ -12,6 +12,11 @@ void main() {
 }
 
 void submitEvent(MouseEvent event) {
+
+  if ((querySelector("#note-entering") as SpanElement).hidden == false) {
+    (querySelector("#note-entering") as SpanElement).hidden = true;
+  }
+
   String message = (querySelector('#textfield') as InputElement).value;
   numcipher.setTranslationString(message);
   List results = numcipher.getTranslatedStrings();
