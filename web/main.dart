@@ -9,11 +9,6 @@ CipherApplication numcipher = new CipherApplication();
 void main() {
   querySelector('#submit').onClick.listen(submitEvent);
   querySelector('#selection').onChange.listen(changeEvent);
-
-
-  if (copyEventTrue != false) {
-    querySelector('#Copy').onClick.listen(copyEvent);
-  }
 }
 
 void submitEvent(MouseEvent event) {
@@ -26,13 +21,20 @@ void submitEvent(MouseEvent event) {
   ..classes.add('list-group-item')
   ..text = results.first;
 
+  var newDelete= new ButtonElement()
+  ..type = "button"
+  ..classes.add('float-xs-right')
+  ..id = "delete"
+  ..text = "Delete";
+
   var newCopy = new ButtonElement()
   ..type = "button"
   ..classes.add('float-xs-right')
-  ..id = "Copy"
+  ..id = "copy"
   ..text = "Copy";
 
   newEntry.children.add(newCopy);
+  newEntry.children.add(newDelete);
 
   // Add entry div to table
   (querySelector('#results') as UListElement).children.insert(0, newEntry);
@@ -42,8 +44,4 @@ void submitEvent(MouseEvent event) {
 void changeEvent(Event event) {
   numcipher.changeTranslationType();
   (querySelector('#textfield') as InputElement).value = "";
-}
-
-void copyEvent(MouseEvent event) {
-  print("hi");
 }
