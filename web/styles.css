@@ -18,15 +18,11 @@ html, body {
 }
 
 footer {
-  position: absolute;
-  bottom: 0px;
+  position:fixed;
+  bottom: 0;
   width: 100%;
 }
 
 .clearcolor {
   color: black;
-}
-
-#introduction {
-  margin-bottom: 30px;
 }

@@ -14,10 +14,34 @@ void main() {
   querySelector('#selection').onChange.listen(changeEvent);
   clearSelector.hidden = true;
   querySelector('#clear').onClick.listen(clearEvent);
+  textfieldSelector.onKeyPress.listen(textFieldKeyEvent);
 }
 
 void submitEvent(MouseEvent event) {
+  textSubmission();
+}
 
+void changeEvent(Event event) {
+  numcipher.changeTranslationType();
+  clearTextfield();
+}
+
+void createAlert() {
+}
+
+void clearEvent(MouseEvent event) {
+  numcipher.clearResults();
+  (querySelector('#results') as UListElement).children.clear();
+  clearSelector.hidden = true;
+}
+
+void textFieldKeyEvent(KeyEvent event) {
+  if (event.keyCode == KeyCode.ENTER) {
+    textSubmission();
+  }
+}
+
+void textSubmission() {
   if (textfieldSelector.value != "") {
 
     if ((querySelector("#note-entering") as SpanElement).hidden == false) {
@@ -46,20 +70,6 @@ void submitEvent(MouseEvent event) {
     clearSelector.hidden = false;
     clearTextfield();
   }
-}
-
-void changeEvent(Event event) {
-  numcipher.changeTranslationType();
-  clearTextfield();
-}
-
-void createAlert() {
-}
-
-void clearEvent(MouseEvent event) {
-  numcipher.clearResults();
-  (querySelector('#results') as UListElement).children.clear();
-  clearSelector.hidden = true;
 }
 
 void clearTextfield() => textfieldSelector.value = "";
